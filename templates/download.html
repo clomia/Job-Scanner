@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Preview-{{term}}.CSV</title>
+	<style>
+		body {
+			height: 100vh;
+			background-color: #8EC5FC;
+			background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+			color: white;
+		}
+
+		section {
+			margin: 100px;
+		}
+
+		a {
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	<ul>
+    <a href="/download?searchingBy={{term}}"><h1>Click here<br>Download scraping for {{term}}.csv</h1></a>
+    <h1>Preview - scraping for {{term}}.csv</h1>
+    <h3>Title | Company | Apply link</h3>
+		<form action="">
+      {% for section in BIG_LIST %}
+      <li>
+        <div>{{section[0]}} | {{section[1][0]}} | {{section[1][1]}} | {{section[1][2]}}</div>		
+      </li>
+      {% endfor %}
+    </form>
+  </ul>
+</body>
+</html>

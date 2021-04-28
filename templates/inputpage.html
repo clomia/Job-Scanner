@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+	</link>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Input page</title>
+	<style>
+		body {
+			height: 100vh;
+			background-color: #0093E9;
+			background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+			color: white;
+		}
+
+		section {
+			margin: 100px;
+		}
+
+    a {
+      color:white;
+    }
+	</style>
+</head>
+
+<body>
+	<section>
+		<form action="resultpage" method="get">
+			<h1>Search by term</h1>
+			<input type="text" placeholder="python" name="searchingBy" required />
+      <button>Find my job!</button>
+     </form>
+  </section>
+  <section>
+    <form action="/">
+      <h3>Cache database</h3>
+      {% for c in cashlist %}
+      <div><a href="/resultpage?searchingBy={{c}}" target="_blank">{{c}}</a></div>
+      {% endfor %}
+    </form>
+  </section>
+</body>
+</html>

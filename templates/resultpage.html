@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<link href="https://andybrewer.github.io/mvp/mvp.css" rel="stylesheet">
+	</link>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Result Page</title>
+	<style>
+		body {
+			height: 100vh;
+			background-color: #00DBDE;
+			background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+			color: white;
+			padding: 10%;
+			padding-top: 0px;
+		}
+
+		a:visited {
+			color: white;
+		}
+
+		a:link {
+			color: rgba(127, 219, 255, 1);
+			color: -webkit-linear-gradient(top, rgba(127, 219, 255, 1) 0%, rgba(82, 140, 163, 1) 100%);
+			color: linear-gradient(to bottom, rgba(127, 219, 255, 1) 0%, rgba(82, 140, 163, 1) 100%);
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: rgba(127, 219, 255, 1);
+			color: -webkit-linear-gradient(top, rgba(127, 219, 255, 1) 0%, rgba(82, 140, 163, 1) 100%);
+			color: linear-gradient(to bottom, rgba(127, 219, 255, 1) 0%, rgba(82, 140, 163, 1) 100%);
+			text-decoration: none;
+		}
+
+		.title {
+			color: white;
+		}
+
+		.title:link {
+			color: white;
+		}
+
+		a {
+			margin-left: 0;
+		}
+
+		div {
+			border-bottom: 1px solid white;
+		}
+
+		.no-border {
+			border-bottom: none;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Remote Jobs Extraction Results</h1>
+		<div class="no-border">{{Total_number}} {{term}} jobs found.</div>
+		<div class="no-border"><a href="/export?searchingBy={{term}}" target="_blank">Export to CSV</a></div>
+		<div class="no-border"><a href="/">← Go back</a></div>
+	</header>
+	<section>
+		{% for section in BIG_LIST %}
+		<header>
+			<h1>{{section[0]}}</h1>
+			<h3>{{section[1][0]}}</h3>
+			<a href="{{section[1][1]}}" target="_blank">Apply</a>
+			<br>{{section[1][2]}} 			
+		</header>
+		{% endfor %}
+	</section>
+</body>
+
+</html>
