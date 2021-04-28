@@ -1,0 +1,5 @@
+# [Repl 바로가기 | Go to Website](https://replit.com/@clomia/Job-Scanner#main.py)
+![](https://github.com/clomia/Job-Scanner/blob/master/screenshot/1.jpg?raw=true)
+![](https://github.com/clomia/Job-Scanner/blob/master/screenshot/2.jpg?raw=true)
+![](https://github.com/clomia/Job-Scanner/blob/master/screenshot/3.jpg?raw=true)
+![](https://github.com/clomia/Job-Scanner/blob/master/screenshot/4.jpg?raw=true)
